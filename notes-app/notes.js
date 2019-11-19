@@ -25,6 +25,27 @@ const addNotes=function(title,body){
     console.log(chalk.inverse.red('Note title taken already!'))
 
 }
+
+
+
+const removeNotes=function(title){
+   // console.log(chalk.inverse.red('Note removed',title))
+    const notes=loadNotes()
+ 
+    const notesToKeep=notes.filter(function(note){
+       return note.title!==title
+    })
+    if(notesToKeep.length==notes.length)
+     console.log(chalk.red('no notes removed !'))
+     else{
+    saveNotes(notesToKeep)
+
+    
+    
+    console.log(chalk.green('Note removed successfully!!'))
+     }
+
+}
 const saveNotes=function(notes)
 {
     const dataJson=JSON.stringify(notes)
@@ -48,5 +69,6 @@ const loadNotes=function(){
 }
 module.exports={
     getNotes:getNotes,
-    addNotes:addNotes
+    addNotes:addNotes,
+    removeNotes:removeNotes
 }

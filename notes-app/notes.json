@@ -1,1 +1,10 @@
-[{"title":"AEW","body":"WRESTLING PROMOTION"}]
+[
+    {
+        "title": "AEW",
+        "body": "WRESTLING PROMOTION"
+    },
+    {
+        "title": "UFC",
+        "body": "MMA"
+    }
+]
